@@ -1,0 +1,137 @@
+.hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4), 
+        rgba(47, 48, 58, 0.4)
+        ),
+    url(../img/mob-header-x1.jpg);
+    min-width: 320px;
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    @include mobail {
+        background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4), 
+        rgba(47, 48, 58, 0.4)
+        ),
+    url(../img/mob-header-x1.jpg);
+        min-width: 480px;
+        min-height: 400px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+    @include tablet {
+        background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4), 
+        rgba(47, 48, 58, 0.4)
+        ),
+    url(../img/table-header-x1.jpg);
+    min-width: 768px;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    }
+    @include desctop {
+        background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4), 
+        rgba(47, 48, 58, 0.4)
+        ),
+    url(../img/fon.jpg);
+    width: 1600px;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    }
+}
+
+.hero .container {
+    // padding: 200px 0 200px;
+    padding: 50px 60px 198px;
+    @include mobail {
+        padding: 118px 60px 198px;
+    }
+    @include tablet {
+        padding: 118px 204px 198px;
+    }
+    @include desctop {
+        padding: 200px 0 200px;
+    }
+}
+
+.hero__box {
+        margin: 0 auto;
+}
+.hero__title {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    max-width: 650px;
+    height: 120px;
+    margin: 0 auto;
+    @include mobail {
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 1.7;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    @include desctop {
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+    }
+}
+.hero__btn {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    background-color: var(--icon-color-svg);
+    min-width: 185px;
+    min-height: 40px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    @include mobail {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.87;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.06em;
+        color: #FFFFFF;
+        width: 200px;
+        height: 50px;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+    }
+    @include desctop {
+        margin-top: 40px;
+    }
+}

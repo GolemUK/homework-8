@@ -1,0 +1,131 @@
+.header .container {
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    align-items: center;
+}
+.header {
+    border-bottom: 1px solid #ececec;
+}
+
+.logo {
+    margin-right: 93px;
+    display: flex;
+    &__blue {
+        font-family: 'Raleway';
+        font-weight: 700;
+        font-size: 26px;
+        line-height: var(--typical-lh);
+        letter-spacing: 0.03em;
+        color: #2196F3;
+    }
+    &__black {  
+        font-family: 'Raleway';
+        font-weight: 700;
+        font-size: 26px;
+        line-height: var(--typical-lh);
+        letter-spacing: 0.03em;
+        color: #000000;
+    }
+}
+
+.navigation {
+    display: flex;
+    column-gap: 50px;
+    &__link {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: var(--main-nav-lh);
+        letter-spacing: 0.02em;
+        color: #212121;
+        position: relative;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+.contact {
+    margin-left: auto;
+    &__mail {
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        color: #757575;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &-svg {
+            max-width: 16px;
+            max-height: 12px;
+            margin-right: 10px;
+            fill: currentColor;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            &:hover,
+            &:focus {
+                fill: currentColor;
+            }
+        }
+    }
+}
+
+
+
+
+.contact__tel {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #757575;
+    margin-left: 50px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &-svg {
+        max-width: 10px;
+        max-height: 16px;
+        margin-right: 10px;
+        fill: currentColor;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+            fill: currentColor;
+        }
+    } 
+}
+
+
+
+
+
+.emphasize {
+    color: #2196F3;
+}
+
+.navigation__link.emphasize::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #2196F3;
+    border-radius: 2px;
+    position: absolute;
+    bottom: -33px;
+    left: 0;
+}
+
+.contact__mail:hover, 
+.contact__tel:hover, 
+.navigation__link:hover {
+    color: #2196F3;
+}
+
+.contact__mail:focus, 
+.contact__tel:focus, 
+.navigation__link:focus {
+    color: #2196F3;
+}

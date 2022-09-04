@@ -1,0 +1,94 @@
+.btn-title {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    color: #212121;
+    border-radius: 4px;
+    padding: 6px 22px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+        background: #2196F3;
+        color: #FFFFFF;
+        box-shadow: 
+        0px 3px 1px rgba(0, 0, 0, 0.1), 
+        0px 1px 2px rgba(0, 0, 0, 0.08), 
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.section-img {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    .section-nav-text {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+    .section-img-text {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 27px;
+        .portfolio-hover {
+            border: 1px solid #EEEEEE;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            &:hover {
+                border: 1px solid #EEEEEE;
+                box-shadow: 
+                0px 1px 1px rgba(0, 0, 0, 0.12), 
+                0px 4px 4px rgba(0, 0, 0, 0.06), 
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+            }
+            &:hover .hover-slap {
+                transform: translateY(0%);
+            }
+        }
+    }
+}
+
+.portfolio-slap{
+    position: relative;
+    overflow: hidden;
+    .hover-slap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+        background-color: rgba(33, 150, 243, 0.9);
+        padding: 63px 24px;
+        height: 100%;
+        transform: translateY(100%);
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: auto;
+    }
+}
+
+.section-text-block {
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    .icon-box {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        color: #212121;
+        margin-bottom: 4px;
+    }
+    .box-p {
+        font-size: 16px;
+        line-height: 1.87;
+        letter-spacing: 0.03em;
+        color: var(--main-color-text);
+    }
+}
