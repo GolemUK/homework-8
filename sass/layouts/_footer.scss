@@ -1,5 +1,8 @@
 .footer .container {
-    // display: flex;
+    @include desctop {
+        display: flex;
+    }
+    
 }
 
 .footer {
@@ -7,12 +10,29 @@
     padding-top: 60px;
     padding-bottom: 60px;
     .footer-p {
+        @include tablet {
+            margin-left: 78px;
+        }
+        @include desctop {
+            margin-left: 0;
+            display: block;
+            min-width: 231px;
+        }
         // display: block;
         // min-width: 231px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        
     }
+}
+
+.logo {
+   @media screen and (min-width: 320px) {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+   }
+   @include tablet {
+
+   }
 }
 
 .logo__blue {
@@ -34,7 +54,20 @@
 
 
 .footer-address {
-    margin-top: 20px;
+    @media screen and (min-width: 320px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @include mobail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @include tablet {
+
+    }
+    
     .footer-link {
         font-style: normal;
         font-size: 14px;
@@ -43,8 +76,22 @@
         color: #FFFFFF;
     }
 }
+.tablet {
+    @include tablet {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @include desctop {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 70px;
+        margin-top: 0;
+    }
+}
 .footer-text {
-    margin-top: 9px;
+    
     .a-mail-a {
         margin-bottom: 9px;
     }
@@ -70,11 +117,18 @@
 }
     
 .footer-soc {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include mobail {
+        margin-top: 60px;
+    }
+    @include tablet {
+        margin-bottom: 102px;
+        margin-right: 89px;
+    }
+    
     // margin-left: 70px;
     .footer-soc-head {
+        display: flex;
+        justify-content: center;
         font-style: normal;
         font-weight: 700;
         font-size: 14px;
@@ -88,6 +142,7 @@
     .soc-footer {
         display: flex;
         justify-content: center;
+        gap: 10px;
         .footer-soc-item {
 
             .footer-soc-link {
@@ -115,9 +170,30 @@
 
 .mailing {
     // margin-left: 93px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    @media screen and (min-width: 320px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @include mobail {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 60px;
+    }
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @include desctop {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 0;
+        margin-bottom: 32px;
+        
+    }
     .footer-mailing {
         font-weight: 700;
         font-size: 14px;
@@ -127,12 +203,34 @@
         color: #FFFFFF;
         margin-top: 12px;
         margin-bottom: 20px;
+        @include tablet {
+            
+        }
     }
     .mailing-btn-input {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
+        @media screen and (min-width: 320px) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        @include mobail {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        @include desctop {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: nowrap;
+        }
         // align-items: baseline;
         .mailing-input {
             width: 100%;
@@ -147,6 +245,10 @@
             background-color: #2F303A;
             color: #FFFFFF;
             padding-left: 16px;
+            @include desctop {
+                width: 358px;
+                height: 50px;
+            }
             &::placeholder {
                 font-family: 'Roboto';
                 font-style: normal;

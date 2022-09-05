@@ -1,6 +1,9 @@
 
 .benefits {
     padding-top: 94px;
+    @include desctop {
+        padding-bottom: 94px;
+    }
 }
 
 .privilege {

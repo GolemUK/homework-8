@@ -25,9 +25,14 @@
     padding-bottom: 94px;
     .section-nav-text {
         display: flex;
+        flex-wrap: wrap;
         gap: 8px;
         margin-bottom: 50px;
         justify-content: center;
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+        }
     }
     .section-img-text {
         display: flex;
@@ -37,6 +42,12 @@
             border: 1px solid #EEEEEE;
             transition-duration: 250ms;
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            @include tablet {
+                width: calc((100% - 30px) / 2);
+            }
+            @include desctop {
+                width: calc((100% - 60px) / 3);
+            }
             &:hover {
                 border: 1px solid #EEEEEE;
                 box-shadow: 

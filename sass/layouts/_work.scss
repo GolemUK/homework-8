@@ -1,6 +1,19 @@
 .our-work {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @media screen and (min-width: 320px) {
+        display: none;
+    }
+    @include mobail {
+        display: none;
+    }
+    @include tablet {
+        display: none;
+    }
+    @include desctop {
+        
+        display: contents;
+        
+    }
+    
     .work__title {
         font-weight: 700;
         font-size: 36px;

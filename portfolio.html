@@ -13,32 +13,75 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a href="./index.html" class="logo item">
-                <span class="logo__blue">Web</span>
-                <span class="logo__black">Studio</span>
-            </a>
-            <nav>
-                <ul class="navigation list">
-                    <li><a href="./index.html" class="navigation__link item">Студия</a></li>
-                    <li><a href="./portfolio.html" class="navigation__link item emphasize">Портфолио</a></li>
-                    <li><a href="" class="navigation__link item">Контакты</a></li>
-                </ul>
-            </nav>
-            <div class="contact">
-                <a href="mailto:info@devstudio.com" class="contact__mail item">
-                    <svg class="contact__mail-svg">
-                        <use href="./img/symbol-defs.svg#icon-envelope" wigth="16" height="12"></use>
-                    </svg> info@devstudio.com
+            <div class="container">
+                <a href="./index.html" class="logo-h item">
+                    <span class="logo-h__blue">Web</span>
+                    <span class="logo-h__black">Studio</span>
                 </a>
-                <a href="tel:+380961111111" class="contact__tel item">
-                    <svg class="contact__tel-svg" wigth="10" height="16">
-                        <use href="./img/symbol-defs.svg#icon-smartphone"></use>
-                    </svg>+38 096 111 11 11
-                </a>
+                <nav>
+                    <ul class="navigation list">
+                        <li><a href="./index.html" class="navigation__link item">Студия</a></li>
+                        <li><a href="./portfolio.html" class="navigation__link item emphasize">Портфолио</a></li>
+                        <li><a href="" class="navigation__link item">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="contact">
+                    <a href="mailto:info@devstudio.com" class="contact__mail item">
+                        <svg class="contact__mail-svg">
+                            <use href="./img/symbol-defs.svg#icon-envelope" wigth="16" height="12"></use>
+                        </svg> info@devstudio.com
+                    </a>
+                    <a href="tel:+380961111111" class="contact__tel item">
+                        <svg class="contact__tel-svg" wigth="10" height="16">
+                            <use href="./img/symbol-defs.svg#icon-smartphone"></use>
+                        </svg>+38 096 111 11 11
+                    </a>
+                </div>
+                <button type="button" class="open-menu border">
+                    <svg class="open-menu__svg" widht="40" height="40">
+                        <use href="./img/benefits-defs.svg#icon-menu"></use>
+                    </svg>
+                </button>
             </div>
-        </div>
-    </header>
+            <div class="mob-menu is-hidden">
+                <button type="button" class="close-menu border" data-modal-close>
+                    <svg class="mob-menu-svg" width="30" height="30">
+                        <use href="./img/symbol-defs.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <nav>
+                    <ul class="mob-nav list">
+                        <li class="mob-nav__list"><a href="./index.html" class="mob-nav__link item">Студия</a></li>
+                        <li class="mob-nav__list"><a href="./portfolio.html" class="mob-nav__link item">Портфолио</a></li>
+                        <li class="mob-nav__list"><a href="" class="mob-nav__link item">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="mob-contact">
+                    <a href="tel:+380961111111" class="mob-contact__tel item">
+                        +380961111111
+                    </a>
+                    <a href="mailto:info@devstudio.com" class="mob-contact__mail item">
+                        info@devstudio.com
+                    </a>
+                </div>
+                <div class="mob-soc">
+                    <ul class="mob-soc__ul">
+                        <li class="mob-soc__list list">
+                            <button type="button" class="mob-soc__item border">Instagram</button>
+                        </li>
+                        <li class="mob-soc__list list">
+                            <button type="button" class="mob-soc__item border">Twitter</button>
+                        </li>
+                        <li class="mob-soc__list list">
+                            <button type="button" class="mob-soc__item border">Facebook</button>
+                        </li>
+                        <li class="mob-soc__list list">
+                            <button type="button" class="mob-soc__item border">LinkedIn</button>
+                        </li>
+                    </ul>    
+                </div>
+            </div>
+        </header>
     <main>
         <section class="section-img">
             <div class="container">
@@ -53,7 +96,21 @@
                     <li class="portfolio-hover">
                         <a href="" class="portfolio-hover-link item">
                             <div class="portfolio-slap">
-                                <img src="./img/technoquack.jpg" lang="en" alt="bulletin board" width="370" height="294" class="portfolio-img">
+                                <picture>
+                                    <source srcset="
+                                    ./img/technoquack.jpg 1x,
+                                    ./img/desktop-techno-x2.jpg 2x"
+                                    media="(min-width:1200px)">
+                                    <source srcset="
+                                    ./img/table-techno-x1.jpg 1x,
+                                    ./img/table-techno-x2.jpg 2x"
+                                    media="(min-width:768px)">
+                                    <source srcset="
+                                    ./img/mob-tehnokryak-x1.jpg 1x,
+                                    ./img/mob-tehnokryak-x2.jpg 2x"
+                                    media="(min-width:320px)">
+                                    <img src="./img/mob-tehnokryak-x1.jpg" lang="en" alt="bulletin board" width="450" height="294" class="portfolio-img">
+                                </picture>
                                 <p class="hover-slap">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                                 </p>
@@ -67,7 +124,21 @@
                     <li class="portfolio-hover">
                         <a href="" class="item">
                             <div class="portfolio-slap">
-                                <img src="./img/poster.jpg" lang="en" alt="poster" width="370" height="294" class="portfolio-img">
+                                <picture>
+                                    <source srcset="
+                                    ./img/poster.jpg 1x,
+                                    ./img/desktop-orlean-x2.jpg 2x"
+                                    media="(min-width:1200px)">
+                                    <source srcset="
+                                    ./img/table-orlean-x1.jpg 1x,
+                                    ./img/table-orlean-x2.jpg 2x"
+                                    media="(min-width:768px)">
+                                    <source srcset="
+                                    ./img/mob-nevorlean-x1.jpg 1x,
+                                    ./img/mob-nevorlean-x2.jpg 2x"
+                                    media="(min-width:320px)">
+                                    <img src="./img/mob-nevorlean-x1.jpg" lang="en" alt="bulletin board" width="450" height="294" class="portfolio-img">
+                                </picture>
                                 <p class="hover-slap">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                                 </p>
@@ -82,7 +153,21 @@
                     <li class="portfolio-hover">
                         <a href="" class="item">
                             <div class="portfolio-slap">
-                                <img src="./img/seafood.jpg" lang="en" alt="restaurant" width="370" height="294" class="portfolio-img">
+                                <picture>
+                                    <source srcset="
+                                    ./img/seafood.jpg 1x,
+                                    ./img/desktop-seafood-x2.jpg 2x"
+                                    media="(min-width:1200px)">
+                                    <source srcset="
+                                    ./img/table-seafood-x1.jpg 1x,
+                                    ./img/table-seafood-x2.jpg 2x"
+                                    media="(min-width:768px)">
+                                    <source srcset="
+                                    ./img/mob-seafood-x1.jpg 1x,
+                                    ./img/mob-seafood-x2.jpg 2x"
+                                    media="(min-width:320px)">
+                                    <img src="./img/mob-seafood-x1.jpg" lang="en" alt="bulletin board" width="450" height="294" class="portfolio-img">
+                                </picture>
                                 <p class="hover-slap">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                                 </p>
@@ -97,7 +182,21 @@
                     <li class="portfolio-hover">
                         <a href="" class="item">
                             <div class="portfolio-slap">
-                                <img src="./img/prime.jpg" lang="en" alt="headphones" width="370" height="294" class="portfolio-img">
+                                <picture>
+                                    <source srcset="
+                                    ./img/prime.jpg 1x,
+                                    ./img/desktop-pprime-x2.jpg 2x"
+                                    media="(min-width:1200px)">
+                                    <source srcset="
+                                    ./img/table-prime-x1.jpg 1x,
+                                    ./img/table-prime-x2.jpg 2x"
+                                    media="(min-width:768px)">
+                                    <source srcset="
+                                    ./img/mob-prime-x1.jpg 1x,
+                                    ./img/mob-prime-x2.jpg 2x"
+                                    media="(min-width:320px)">
+                                    <img src="./img/mob-prime-x1.jpg" lang="en" alt="bulletin board" width="450" height="294" class="portfolio-img">
+                                </picture>
                                 <p class="hover-slap">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                                 </p>
@@ -112,7 +211,21 @@
                     <li class="portfolio-hover">
                         <a href="" class="item">
                             <div class="portfolio-slap">
-                                <img src="./img/boxes.jpg" lang="en" alt="boxes" width="370" height="294" class="portfolio-img">
+                                <picture>
+                                    <source srcset="
+                                    ./img/boxes.jpg 1x,
+                                    ./img/desktop-box-x2.jpg 2x"
+                                    media="(min-width:1200px)">
+                                    <source srcset="
+                                    ./img/table-box-x1.jpg 1x,
+                                    ./img/table-box-x2.jpg 2x"
+                                    media="(min-width:768px)">
+                                    <source srcset="
+                                    ./img/mob-boxes-x1.jpg 1x,
+                                    ./img/mob-boxes-x2.jpg 2x"
+                                    media="(min-width:320px)">
+                                    <img src="./img/mob-boxes-x1.jpg" lang="en" alt="bulletin board" width="450" height="294" class="portfolio-img">
+                                </picture>
                                 <p class="hover-slap">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                                 </p>
@@ -127,7 +240,21 @@
                     <li class="portfolio-hover">
                         <a href="" class="item">
                             <div class="portfolio-slap">
-                                <img src="./img/inspiration.jpg" lang="en" alt="inspiration has no borders" width="370" height="294" class="portfolio-img">
+                                <picture>
+                                    <source srcset="
+                                    ./img/inspiration.jpg 1x,
+                                    ./img/desktop-border-x2.jpg 2x"
+                                    media="(min-width:1200px)">
+                                    <source srcset="
+                                    ./img/table-borders-x1.jpg 1x,
+                                    ./img/table-borders-x2.jpg 2x"
+                                    media="(min-width:768px)">
+                                    <source srcset="
+                                    ./img/mob-inspiration-x1.jpg 1x,
+                                    ./img/mob-inspiration-x2.jpg 2x"
+                                    media="(min-width:320px)">
+                                    <img src="./img/mob-inspiration-x1.jpg" lang="en" alt="bulletin board" width="450" height="294" class="portfolio-img">
+                                </picture>
                                 <p class="hover-slap">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                                 </p>
@@ -142,7 +269,21 @@
                     <li class="portfolio-hover">
                         <a href="" class="item">
                             <div class="portfolio-slap">
-                                <img src="./img/limited-edition.jpg" lang="en" alt="book" width="370" height="294" class="portfolio-img">
+                                <picture>
+                                    <source srcset="
+                                    ./img/limited-edition.jpg 1x,
+                                    ./img/desktop-limited-x2.jpg 2x"
+                                    media="(min-width:1200px)">
+                                    <source srcset="
+                                    ./img/table-limited-x1.jpg 1x,
+                                    ./img/table-limited-x2.jpg 2x"
+                                    media="(min-width:768px)">
+                                    <source srcset="
+                                    ./img/mob-limited-x1.jpg 1x,
+                                    ./img/mob-limited-x2.jpg 2x"
+                                    media="(min-width:320px)">
+                                    <img src="./img/mob-limited-x1.jpg" lang="en" alt="bulletin board" width="450" height="294" class="portfolio-img">
+                                </picture>
                                 <p class="hover-slap">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                                 </p>
@@ -157,7 +298,21 @@
                     <li class="portfolio-hover">
                         <a href="" class="item">
                             <div class="portfolio-slap">
-                                <img src="./img/lab.jpg" lang="en" alt="project lab" width="370" height="294" class="portfolio-img">
+                                <picture>
+                                    <source srcset="
+                                    ./img/lab.jpg 1x,
+                                    ./img/desktop-lab-x2.jpg 2x"
+                                    media="(min-width:1200px)">
+                                    <source srcset="
+                                    ./img/table-lab-x1.jpg 1x,
+                                    ./img/table-lab-x2.jpg 2x"
+                                    media="(min-width:768px)">
+                                    <source srcset="
+                                    ./img/mob-lab-x1.jpg 1x,
+                                    ./img/mob-lab-x2.jpg 2x"
+                                    media="(min-width:320px)">
+                                    <img src="./img/mob-lab-x1.jpg" lang="en" alt="bulletin board" width="450" height="294" class="portfolio-img">
+                                </picture>
                                 <p class="hover-slap">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                                 </p>
@@ -172,7 +327,21 @@
                     <li class="portfolio-hover">
                         <a href="" class="item">
                             <div class="portfolio-slap">
-                                <img src="./img/growing-business.jpg" lang="en" alt="growing business" width="370" height="294" class="portfolio-img">
+                                <picture>
+                                    <source srcset="
+                                    ./img/growing-business.jpg 1x,
+                                    ./img/desktop-growing-x2.jpg 2x"
+                                    media="(min-width:1200px)">
+                                    <source srcset="
+                                    ./img/table-busines-x1.jpg 1x,
+                                    ./img/table-busines-x2.jpg 2x"
+                                    media="(min-width:768px)">
+                                    <source srcset="
+                                    ./img/mob-growing-x1.jpg 1x,
+                                    ./img/mob-growing-x2.jpg 2x"
+                                    media="(min-width:320px)">
+                                    <img src="./img/mob-growing-x1.jpg" lang="en" alt="bulletin board" width="450" height="294" class="portfolio-img">
+                                </picture>
                                 <p class="hover-slap">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                                 </p>
@@ -190,59 +359,61 @@
     </main>
     <footer class="footer">
             <div class="container">
-                <div class="footer-p">
-                    <a href="./index.html" class="logo item">
-                        <span class="logo__blue">Web</span>
-                        <span class="logo__white">Studio</span>
-                    </a>
-                    <address class="footer-address">
-                        <a href="https://goo.gl/maps/YqqTpUevkr622uBYA" target="_blank" rel="noopener nofollow noreferrer" class="footer-link item">г. Киев, пр-т Леси Украинки, 26</a>
-                        <ul class="footer-text list item">
-                            <li class="a-mail-a"><a href="mailto:info@example.com" class="mail item">info@example.com</a></li>
-                            <li class="a-tel-a"><a href="tel:+380991111111" class="tel item">+38 099 111 11 11</a></li>
+                <div class="tablet">
+                    <div class="footer-p">
+                        <a href="./index.html" class="logo item">
+                            <span class="logo__blue">Web</span>
+                            <span class="logo__white">Studio</span>
+                        </a>
+                        <address class="footer-address">
+                            <a href="https://goo.gl/maps/YqqTpUevkr622uBYA" target="_blank" rel="noopener nofollow noreferrer" class="footer-link item">г. Киев, пр-т Леси Украинки, 26</a>
+                            <ul class="footer-text list item">
+                                <li class="a-mail-a"><a href="mailto:info@example.com" class="mail item">info@example.com</a></li>
+                                <li class="a-tel-a"><a href="tel:+380991111111" class="tel item">+38 099 111 11 11</a></li>
+                            </ul>
+                        </address>
+                    </div>
+                    <div class="footer-soc">
+                        <h3 class="footer-soc-head">приєднуйтесь</h3>
+                        <ul class="soc-footer">
+                            <li class="footer-soc-item list">
+                                <a href="" class="footer-soc-link">
+                                    <svg class="footer-soc-icon" width="20" height="20">
+                                        <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-soc-item list">
+                                <a href="" class="footer-soc-link">
+                                    <svg class="footer-soc-icon" width="20" height="20">
+                                        <use href="./img/symbol-defs.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-soc-item list">
+                                <a href="" class="footer-soc-link">
+                                    <svg class="footer-soc-icon" width="20" height="20">
+                                        <use href="./img/symbol-defs.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-soc-item list">
+                                <a href="" class="footer-soc-link">
+                                    <svg class="footer-soc-icon" width="20" height="20">
+                                        <use href="./img/symbol-defs.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
                         </ul>
-                    </address>
+                    </div> 
                 </div>
-                <div class="footer-soc">
-                    <h3 class="footer-soc-head">приєднуйтесь</h3>
-                    <ul class="soc-footer">
-                        <li class="footer-soc-item list">
-                            <a href="" class="footer-soc-link">
-                                <svg class="footer-soc-icon" width="20" height="20">
-                                    <use href="./img/symbol-defs.svg#icon-instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-soc-item list">
-                            <a href="" class="footer-soc-link">
-                                <svg class="footer-soc-icon" width="20" height="20">
-                                    <use href="./img/symbol-defs.svg#icon-twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-soc-item list">
-                            <a href="" class="footer-soc-link">
-                                <svg class="footer-soc-icon" width="20" height="20">
-                                    <use href="./img/symbol-defs.svg#icon-facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-soc-item list">
-                            <a href="" class="footer-soc-link">
-                                <svg class="footer-soc-icon" width="20" height="20">
-                                    <use href="./img/symbol-defs.svg#icon-linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div> 
                 <div class="mailing">
                     <h2 class="footer-mailing">Підпишіться на розсилку</h2>
                     <div class="mailing-btn-input">
                         <input type="text"
                             class="mailing-input"
                             placeholder="E-mail">
-                        <button type="button" class="mailing-btn border ">Підписатися
+                        <button type="button" class="mailing-btn border">Підписатися
                             <svg class="button-svg" width="24" height="24">
                                 <use href="./img/symbol-defs.svg#icon-icon-send"></use>
                             </svg>
@@ -251,5 +422,6 @@
                 </div>
             </div>
         </footer>
+        <script src="./js/menu.js"></script>
     </body>
 </html>
