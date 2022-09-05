@@ -4,8 +4,8 @@
     background-color: #F5F4FA;
     &-heading {
         font-weight: 700;
-        font-size: 36px;
-        line-height: 1.16;
+        font-size: 28px;
+        line-height: 33px;
         text-align: center;
         letter-spacing: 0.03em;
         color: #212121;
@@ -14,17 +14,26 @@
 }
 
 .section-d-text {
-        display: flex;
-        gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 .section-d-li {
-    width: calc((100% - 90px) / 4);
+    // width: calc((100% - 90px) / 4);
+        width: 100%;
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2);
+    }
+    
+    @include desctop {
+        width: calc((100% - 90px) / 4);
+    }
 }
 .section-d-seb-div {
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+    // padding-left: 10px;
+    // padding-right: 10px;
     text-align: center;
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px 
