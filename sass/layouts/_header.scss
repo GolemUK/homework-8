@@ -48,6 +48,7 @@
 }
 
 .open-menu {
+    background-color: #fff;
     @include tablet {
         display: none;
     }
@@ -216,4 +217,150 @@
     @include desctop {
         color: #2196F3;
     }
+}
+
+.close-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.mob-menu .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 48px 40px;
+}
+
+.mob-menu {
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    @include tablet {
+        display: none;
+    }
+    @include desctop {
+        display: none;
+    }
+}
+
+
+
+.mob-menu-svg {
+    fill: #000000;
+    &:hover {
+        fill: var(--icon-color-svg);
+    }
+}
+
+.mob-nav__list {
+    @media screen and (min-width: 320px) {
+        margin-bottom: 10px;
+    }
+}
+
+.mob-nav__link {
+    @media screen and (min-width: 320px) {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: .02em;
+        color: #212121;
+    }
+    @include mobail {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 47px;
+        letter-spacing: 0.02em;
+        color: #212121; 
+    }
+}
+
+.mob-contact {
+    display: flex;
+    flex-direction: column;
+}
+.mob-contact__mail {
+    @media screen and (min-width: 320px) {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: .02em;
+        color: #212121;
+    }
+    @include mobail {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        color: #757575;
+    }
+    
+}
+.mob-contact__tel {
+    @media screen and (min-width: 320px) {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: .02em;
+        color: #212121;
+        margin-bottom: 16px;
+        color: #2196F3;
+    }
+    @include mobail {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+        color: #2196F3;
+        margin-bottom: 32px;
+    }
+}
+
+.mob-soc__ul {
+    display: flex;
+    @media screen and (min-wight:320px) {
+        gap: 10px;
+    }
+    @include mobail {
+        gap: 20px;
+    }
+}
+.mob-soc__item {
+    @media screen and (min-width: 320px) {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: .02em;
+        color: #2196f3;
+    }
+    @include mobail {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        color: #2196F3;
+    } 
 }

@@ -1,6 +1,6 @@
 
 .benefits {
-    padding-top: 94px;
+    padding: 60px 0;
     @include desctop {
         padding-bottom: 94px;
     }
@@ -55,10 +55,12 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    text-align: center;
     color: #212121;
     margin-bottom: 10px;
-    
+    text-align: center;
+    @include tablet {
+        text-align: left;
+    }
 }
 .privilege__desc {
     font-size: 14px;

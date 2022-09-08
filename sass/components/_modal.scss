@@ -16,8 +16,8 @@
 
 .modal {
     position: absolute;
-    width: 528px;
-    min-height: 581px;
+    // width: 528px;
+    // min-height: 581px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(1) rotate(0);
@@ -29,21 +29,38 @@
     border-radius: 4px;
     transition-duration: 1250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    &-close {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-            .close {
-            display: flex;
-            width: 30px;
-            height: 30px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background-color: #FFFFFF;
-            cursor: pointer;
-        }
+    @media screen and (min-width: 320px) {
+        width: 320px;
+        min-height: 609px;
+    }
+    @include mobail {
+        min-width: 450px;
+        min-height: 609px;
+    }
+    @include tablet {
+        width: 450px;
+        min-height: 609px;
+    }
+    @include desctop {
+        width: 528px;
+        min-height: 581px;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+        .close {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #FFFFFF;
+        cursor: pointer;
     }
 }
 
@@ -70,17 +87,40 @@
 .modal-title {
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 1.1;
+    // font-size: 20px;
+    // line-height: 1.1;
     text-align: center;
     letter-spacing: 0.03em;
     color: #212121;
-    padding: 40px 39px 12px 41px;    
+    padding: 40px 39px 12px 41px;
+    @media screen and (min-width:320px) {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    @include mobail {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    @include tablet {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    @include desctop {
+        font-size: 20px;
+        line-height: 1.1;
+    }   
 }
 
 .modal-section {
-    padding: 0 40px;
+    // padding: 0 40px;
+    @media screen and (min-width:320px) {
+        padding: 0 30px;
+    }
+    @include mobail {
+        padding: 0 40px;
+    }
 }
+
 
 .window__label {
     font-style: normal;
@@ -102,13 +142,23 @@
 }
 
 .window__input {
-    width: 100%;
+    // width: 100%;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     margin-bottom: 10px;
-    padding-left: 42px; 
+    padding-left: 42px;
+    @media screen and (min-width: 320px) {
+        min-width: 260px;
+    }
+    @include mobail {
+        min-width: 370px;
+    }
+    @include desctop {
+        min-width: 448px;
+    } 
 }
+
 
 .window__svg {
     position: absolute;
@@ -190,15 +240,53 @@
     fill: #FFFFFF;
 }
 
+.contract-text{
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    @media screen and (min-width:320px) {
+        font-size: 8px;
+        line-height: 12px;
+    }
+    @include mobail {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    @include tablet {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    @include desctop {
+        font-style: 14px;
+        line-height: 1.7;
+    }
+}
 .contract-term {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
+    // font-size: 14px;
+    // line-height: 1.7;
     letter-spacing: 0.03em;
     text-decoration-line: underline;
     color: var(--icon-color-svg);
     margin-left: 4px;
+    @media screen and (min-width: 320px){
+        font-size: 8px;
+        line-height: 12px;
+    }
+    @include mobail {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    @include tablet {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    @include desctop {
+        font-size: 14px;
+        line-height: 1.7;
+    }
 }
 
 .input-check:checked + .label-check span {

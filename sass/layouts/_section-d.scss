@@ -1,9 +1,12 @@
 .section-d {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    // padding-top: 94px;
+    // padding-bottom: 94px;
     background-color: #F5F4FA;
+    @media screen and (min-width: 320px) {
+        padding: 60px 0;
+    }
     @include desctop {
-        padding-top: 188px;
+        padding: 60px 0;
     }
     &-heading {
         font-weight: 700;
@@ -13,6 +16,10 @@
         letter-spacing: 0.03em;
         color: #212121;
         margin-bottom: 50px;
+        @include desctop {
+            font-size: 36px;
+            line-height: 42px;
+        }
     }
 }
 

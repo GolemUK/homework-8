@@ -1,6 +1,5 @@
 .clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: 60px 0;
     .clients-head {
         font-style: normal;
         font-weight: 700;
@@ -10,7 +9,12 @@
         letter-spacing: 0.03em;
         color: #212121;
         margin-bottom: 30px;
+        @include desctop {
+            font-size: 36px;
+            line-height: 42px;
+        }
     }
+    
 }
 .clients-soc {
     display: flex;
