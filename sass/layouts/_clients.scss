@@ -1,5 +1,8 @@
 .clients {
     padding: 60px 0;
+    @include desctop {
+        padding: 94px 0;
+    }
     .clients-head {
         font-style: normal;
         font-weight: 700;
@@ -12,6 +15,7 @@
         @include desctop {
             font-size: 36px;
             line-height: 42px;
+            margin-bottom: 50px;
         }
     }
     

@@ -6,7 +6,7 @@
         padding: 60px 0;
     }
     @include desctop {
-        padding: 60px 0;
+        padding: 94px 0;
     }
     &-heading {
         font-weight: 700;
@@ -15,10 +15,13 @@
         text-align: center;
         letter-spacing: 0.03em;
         color: #212121;
-        margin-bottom: 50px;
+        @media screen and (min-width: 320px) {
+            margin-bottom: 30px;
+        }
         @include desctop {
             font-size: 36px;
             line-height: 42px;
+            margin-bottom: 50px;
         }
     }
 }
