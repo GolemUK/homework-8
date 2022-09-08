@@ -1568,11 +1568,17 @@ img {
         -ms-flex-direction: row;
             flex-direction: row;
     margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media screen and (min-width: 1200px) {
   .section-img .section-nav-text {
     margin-bottom: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .section-img .section-img-text {

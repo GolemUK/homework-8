@@ -39,9 +39,11 @@
             display: flex;
             flex-direction: row;
             margin-bottom: 30px;
+            justify-content: center;
         }
         @include desctop {
             margin-bottom: 50px;
+            justify-content: center;
         }
     }
     .section-img-text {
