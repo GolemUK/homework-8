@@ -21,17 +21,27 @@
 }
 
 .section-img {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @media screen and (min-width: 320px) {
+        padding: 60px 0;
+    }
+    @include desctop {
+        padding: 94px 0;
+    }
     .section-nav-text {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        margin-bottom: 50px;
-        justify-content: center;
+        justify-content: flex-start;
+        @media screen and (min-width: 320px) {
+            margin-bottom: 40px;
+        }
         @include tablet {
             display: flex;
             flex-direction: row;
+            margin-bottom: 30px;
+        }
+        @include desctop {
+            margin-bottom: 50px;
         }
     }
     .section-img-text {
